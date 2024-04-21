@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import BasePage from "./BasePage";
+import BasePage from "./basePage";
 class LoginPage extends BasePage {
   get userNameField() {
     return cy.get('[data-test="username"]');

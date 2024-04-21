@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
-import InventoryPage from "../page-objects/pages/InventoryPage";
+import InventoryPage from "../page-objects/pages/inventoryPage";
+import itemPage from "../page-objects/pages/itemPage";
 
 beforeEach(() => {
   InventoryPage.open();
@@ -7,7 +8,7 @@ beforeEach(() => {
 
 describe("Presence of UI elements in inventory page test", () => {
   it("Burger menu icon is present", () => {
-    InventoryPage.BurgerMenuPresence();
+    InventoryPage.burgerMenuPresence();
   });
 
   it("Cart icon is present", () => {
@@ -30,7 +31,7 @@ describe("Cart page test", () => {
 });
 
 describe("Specific item page test", () => {
-  it("Item page for first item is opened", () => {
-    InventoryPage.openFirstItemPage();
+  it("Specific item page is opened", () => {
+    itemPage.openItemPage(1)
   });
 });

@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
-import LoginPage from "./LoginPage";
-import BasePage from "./BasePage";
-import InventoryPage from "./InventoryPage";
+import LoginPage from "./loginPage";
+import BasePage from "./basePage";
+import InventoryPage from "./inventoryPage";
 import userData from "../../fixtures/userData.json";
 
 class ItemPage extends BasePage {

@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
-import LoginPage from "./LoginPage";
-import BasePage from "./BasePage";
+import LoginPage from "./loginPage";
+import BasePage from "./basePage";
 
 import userData from "../../fixtures/userData.json";
 
@@ -25,16 +25,8 @@ class InventoryPage extends BasePage {
     return cy.get(".shopping_cart_link");
   }
 
-  get firstItem() {
-    return cy.get("#item_0_title_link");
-  }
-
   get URL() {
     return cy.url("");
-  }
-
-  get firstItemTitle() {
-    return cy.get(".inventory_details_name");
   }
 
   open() {
@@ -46,7 +38,7 @@ class InventoryPage extends BasePage {
     this.pageTitle.should("be.visible");
   }
 
-  BurgerMenuPresence() {
+  burgerMenuPresence() {
     this.burgerMenuButton.should("be.visible");
   }
 
@@ -65,12 +57,6 @@ class InventoryPage extends BasePage {
   openCartButton() {
     this.cartButton.click();
     this.URL.should("eq", "https://www.saucedemo.com/cart.html");
-  }
-
-  openFirstItemPage() {
-    this.firstItem.click();
-    this.URL.should("include", "id=0");
-    this.firstItemTitle.should("have.text", "Sauce Labs Bike Light");
   }
 }
 

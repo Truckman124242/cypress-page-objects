@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import ItemPage from "../page-objects/pages/ItemPage";
+import ItemPage from "../page-objects/pages/itemPage";
 
 beforeEach(() => {
   ItemPage.open();
