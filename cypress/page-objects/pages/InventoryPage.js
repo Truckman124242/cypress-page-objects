@@ -25,7 +25,7 @@ class InventoryPage extends BasePage {
     return cy.get(".shopping_cart_link");
   }
 
-  get URL() {
+  get url() {
     return cy.url("");
   }
 
@@ -56,7 +56,7 @@ class InventoryPage extends BasePage {
 
   openCartButton() {
     this.cartButton.click();
-    this.URL.should("eq", "https://www.saucedemo.com/cart.html");
+    this.url.should("eq", "https://www.saucedemo.com/cart.html");
   }
 }
 
