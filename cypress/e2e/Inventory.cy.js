@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import inventoryPage from "../page-objects/pages/inventoryPage";
 import InventoryPage from "../page-objects/pages/inventoryPage";
 import itemPage from "../page-objects/pages/itemPage";
 
@@ -32,6 +33,6 @@ describe("Cart page test", () => {
 
 describe("Specific item page test", () => {
   it("Specific item page is opened", () => {
-    itemPage.openItemPage(1)
+    InventoryPage.openItemPage(1)
   });
 });

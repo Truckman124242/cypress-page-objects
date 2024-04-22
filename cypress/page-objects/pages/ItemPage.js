@@ -22,10 +22,6 @@ class ItemPage extends BasePage {
     return cy.get(".inventory_details_name");
   }
 
-  get allItems() {
-    return cy.get(".inventory_item");
-  }
-
   get addToCartButton() {
     return cy.get("#add-to-cart");
   }
@@ -41,12 +37,8 @@ class ItemPage extends BasePage {
       userData.passwords.correctPassword
     );
     InventoryPage.pageTitle.should("be.visible");
-    this.openItemPage(0);
+    InventoryPage.openItemPage(0);
     cy.url().should("include", "/inventory-item.html");
-  }
-
-  openItemPage(itemIndex) {
-    this.allItems.eq(itemIndex).find(".inventory_item_name").click();
   }
 
   verifyItemDescription() {

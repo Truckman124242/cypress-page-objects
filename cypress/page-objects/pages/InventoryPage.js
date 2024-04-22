@@ -29,6 +29,10 @@ class InventoryPage extends BasePage {
     return cy.url("");
   }
 
+  get allItems() {
+    return cy.get(".inventory_item");
+  }
+
   open() {
     super.open("");
     LoginPage.login(
@@ -57,6 +61,10 @@ class InventoryPage extends BasePage {
   openCartButton() {
     this.cartButton.click();
     this.url.should("eq", "https://www.saucedemo.com/cart.html");
+  }
+
+  openItemPage(itemIndex) {
+    this.allItems.eq(itemIndex).find(".inventory_item_name").click();
   }
 }
 
